@@ -1,5 +1,6 @@
 // Import useState hook from React (used to store and update values)
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 // This is a React functional component named Login
 export default function Login() {
@@ -46,6 +47,10 @@ export default function Login() {
           value={password} // binds password state
           onChange={(e) => setPassword(e.target.value)} // updates password state
         />
+
+        <p>
+          <Link to="/forgot-password">Forgot Password?</Link>
+        </p>
 
         {/* Login Button */}
         <button
